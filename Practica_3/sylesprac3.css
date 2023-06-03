@@ -1,0 +1,66 @@
+
+
+.Position__Container > .position__box{
+    border: 1px solid black;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.box--collumn{
+    height:700px;
+    width: 450px;
+    background-color: white;
+
+}
+
+.box--image{
+    height: 200px;
+    width: 450px;
+    position: relative;
+    bottom: 702px;
+
+}
+
+.box--text{
+    height: 479px;
+    width: 450px;
+    position: relative;
+    bottom: 683px;
+    background-color: darkturquoise;
+}
+
+.box--text > .text{
+    text-align: center;
+}
+
+.box--text > .plan__box{
+    width: 80%;
+    height: 90px;
+    background-color: grey;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.box--text > .plan__box > .icon__box{
+    position: relative;
+    top: 21px;
+    left: 21px;
+
+}
+
+.box--text > .plan__box > .price{
+    position: relative;
+    top: -60px;
+    left: -28px;
+    right: 10px;
+    text-align: center;
+
+}
+
+.box--text > .plan__box > .option{
+    position: relative;
+    top: -116px;
+    bottom: 10px;
+    left: 281px;
+}
