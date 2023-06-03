@@ -1,66 +1,140 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 
-.Position__Container > .position__box{
-    border: 1px solid black;
-    margin: auto;
-    border-radius: 15px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.box--collumn{
-    height:700px;
-    width: 450px;
-    background-color: white;
-
-}
-
-.box--image{
-    height: 200px;
-    width: 450px;
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    min-height: 100vh;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: hsl(225, 100%, 94%);
     position: relative;
-    bottom: 702px;
-
+    font-size: 16px;
 }
 
-.box--text{
-    height: 479px;
-    width: 450px;
-    position: relative;
-    bottom: 683px;
-    background-color: darkturquoise;
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.box--text > .text{
+.text-content{
+    padding: 7%;
     text-align: center;
 }
 
-.box--text > .plan__box{
-    width: 80%;
-    height: 90px;
-    background-color: grey;
-    margin: auto;
-    margin-top: 40px;
-    border-radius: 10px;
+.title{
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
-.box--text > .plan__box > .icon__box{
-    position: relative;
-    top: 21px;
-    left: 21px;
-
+.text-content p.subtitle {
+    color: rgb(175, 178, 182);
+    margin-bottom: 20px;
 }
 
-.box--text > .plan__box > .price{
-    position: relative;
-    top: -60px;
-    left: -28px;
-    right: 10px;
-    text-align: center;
+.plan-box {
+    background-color: hsl(225, 100%, 94%);
+    border-radius: 12px;
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    justify-content: space-between;
 
 }
 
-.box--text > .plan__box > .option{
-    position: relative;
-    top: -116px;
-    bottom: 10px;
-    left: 281px;
+.plan-box-left {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.plan-box-left div {
+    margin-left: 20px;
+}
+
+.plant-box-left div h5 {
+    font-weight: 900;
+    font-size: 15px;
+    color: hsl(221, 9%, 34%);
+}
+
+.plant-box-left div p {
+    font-size: 14px;
+    color:  hsl(225, 100%, 94%);
+}
+
+.plan-box a{
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+
+}
+
+a.proceed-button {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color:hsl(245, 75%, 52%);
+    padding: 15px 0;
+    border-radius: 12px;
+    margin: 30px 0;
+}
+
+.plan-box a:hover {
+    text-decoration: none;
+    color: hsl(224, 23%, 55%);
+    transition: color .3s ease;
+}
+
+a.cancel-button {
+    color: hsl(224, 23%, 55%);
+    text-decoration: none;
+    font-weight: 900;
+    transition: background-color .3s ease;
+
+}
+
+a.proceed-button:hover {
+    background-color: hsl(224, 23%, 55%);
+    transition: background-color .3s ease;
+
+
+}
+
+a.cancel-button:hover {
+    color: hsl(223, 47%, 23%);
+}
+@media only screen and (max-width:425px){
+    body{
+        background-image: url(./images/pattern-background-mobile.svg);
+        font-size: 14px;
+    }
+    .container {
+        max-width: 87%;
+    }
+    .title {
+        font-size: 23px 
+    }
+    div.plan-box {
+        padding: 12px;
+    }
+    .plan-box-left div {
+        margin-left: 10px;
+    }
+    a.proceed-button, a.cancel-button,.plan-box a {
+        font-size: 13px;
+    }
 }
